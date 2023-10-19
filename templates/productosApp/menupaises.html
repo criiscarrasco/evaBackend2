@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '/estilo.css' %}">
+</head>
+
+<body class="container mt-5">
+    <div class="alert alert-info display-1 text-center">
+        <img src="{% static 'imagenes/logo.png' %}" width="100px" alt="" /> PAISES
+    </div>
+    <div class="alert alert-dark display-3">{{pais}}</div>
+    <div class="row">
+        <div class="col">
+            <a href="/chile" class="btn p-3 btn-outline-danger w-100 {{disabled0}}">Chile</a>
+        </div>
+        <div class="col">
+            <a href="/espana" class="btn p-3 btn-outline-warning w-100 {{disable1}}">España</a>
+        </div>
+        <div class="col">
+            <a href="/mexico" class="btn p-3 btn-outline-success w-100 {{disable2}}">Mexico</a>
+        </div>
+    </div>
+
+    <div class="col mt-5">
+        <div class="row aling">
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static nombreImagen %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Informacion de {{pais}}</h5>
+                            <p class="card-text">Año de independencia: {{anoindependencia}}</p>
+                            <p class="card-text">Lema: {{lema}}</p>
+                            <p class="card-text">Continente: {{continente}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/inicio/" class="btn btn-info mt-5">Volver</a>
+</body>
+
+
+
+</html>
